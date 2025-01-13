@@ -6,6 +6,9 @@ export default {
       screens: {
         xs: "300px",
       },
+      backgroundSize: {
+        med: "100% 100%",
+      },
     },
   },
   plugins: [],
