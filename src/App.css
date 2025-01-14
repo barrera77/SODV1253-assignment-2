@@ -88,6 +88,26 @@
   cursor: pointer;
 }
 
+.recipe-card {
+  width: 250px;
+  max-width: 250px;
+  height: 300px;
+  max-height: 300px;
+}
+
+.circled-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: auto;
+}
+
+.card-content {
+  text-align: center;
+  padding: 1rem 0;
+}
+
 @media (min-width: 300px) and (max-width: 640px) {
   .hero-wrapper {
     background-image: url("./assets/background-mobile-4.jpg");
