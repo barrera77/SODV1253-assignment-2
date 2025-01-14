@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <div className="hero-wrapper xs:bg-cover sm:bg-med">
-      <div className="hero-content xs:w-[100%] xs:top-[20%] md:top-[3%] ">
+      <div className="hero-content xs:w-[100%] xs:top-[20%] md:top-[3%] 2xl:top-[15%] ">
         <div className="ps-[5%] xs:w-[100%] xs:ps-0 w-[90%] sm:p-[4rem] md:w-[80%] lg:w-[70%] xl:w-[70%] 2xl:w-[60%]">
           <h1 className="mb-[3rem] pb-5 text-6xl font-extrabold tracking-tight text-white md:text-7xl lg:text-10xl dark:text-white xs:text-5xl">
             Cook with Confidence, <br /> Eat with Joy
@@ -13,7 +13,9 @@ const Hero = () => {
             fun, flavorful, and easy!!
           </p>
           <div className="mt-9">
-            <button className="browse-button">Find Your Next Meal</button>
+            <a href={`#search`} className="browse-button">
+              Find Your Next Meal
+            </a>
           </div>
         </div>
       </div>

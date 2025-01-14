@@ -52,18 +52,16 @@ const Navbar = () => {
       </div>
       <div className="navbar-md-view xs:hidden sm:block">
         <ul className="nav-links xs:w-[80%]">
-          <li className="nav-link">
-            <a>Home</a>
-          </li>
-          <li className="nav-link">
-            <a>About</a>
-          </li>
-          <li className="nav-link">
-            <a>Latest Recipes</a>
-          </li>
-          <li className="nav-link">
-            <a>Contact</a>
-          </li>
+          {navLinks.map((link) => (
+            <li
+              className={`${
+                active === link.title ? "text-white" : "text-inactive"
+              } nav-link`}
+              key={link.id}
+            >
+              <a href={`#${link.id}`}>{link.title}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

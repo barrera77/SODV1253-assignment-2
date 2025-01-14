@@ -8,11 +8,11 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "latestRecipes",
-    title: "Latest Recipes",
+    id: "topTenRecipes",
+    title: "Top 10 Recipes",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "search",
+    title: "Search",
   },
 ];

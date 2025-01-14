@@ -73,6 +73,21 @@
   background-color: transparent;
 }
 
+.search-input {
+  padding: 10px;
+}
+
+.btn-search {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.recipe-category {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  cursor: pointer;
+}
+
 @media (min-width: 300px) and (max-width: 640px) {
   .hero-wrapper {
     background-image: url("./assets/background-mobile-4.jpg");
