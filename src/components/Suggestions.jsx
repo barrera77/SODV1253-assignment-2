@@ -7,7 +7,6 @@ const END_POINT_RANDOM = "/random?number=10";
 
 const Suggestions = () => {
   const [data, setData] = useState(null);
-  const [randomRecipes, setRandomRecipes] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 

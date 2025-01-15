@@ -38,64 +38,6 @@ const SearchResults = () => {
               </div>
             </div>
           </div>
-
-          <div className="recipe-card sm:w-[290px] h-[280px] xs:w-[100%]">
-            <div className="card-image h-[160px] overflow-hidden">
-              <a href="">
-                <img
-                  src={recipeImage}
-                  alt="Recipe Image"
-                  className="squared-image "
-                />
-              </a>
-            </div>
-            <div className="recipe-card-content">
-              <div className="likes-display">
-                <FaHeart className="text-indigo-300 text-xl " />
-                <span>Likes</span>
-              </div>
-              <a href="" className="hover:text-indigo-300">
-                Recipe title
-              </a>
-              <div className="text-[14px] my-2">
-                <p>Summary</p>
-              </div>
-              <div>
-                <div className="text-[12px] text-end">
-                  <span>Prep Time</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="recipe-card sm:w-[290px] h-[280px] xs:w-[100%]">
-            <div className="card-image h-[160px] overflow-hidden">
-              <a href="">
-                <img
-                  src={recipeImage}
-                  alt="Recipe Image"
-                  className="squared-image "
-                />
-              </a>
-            </div>
-            <div className="recipe-card-content">
-              <div className="likes-display">
-                <FaHeart className="text-indigo-300 text-xl " />
-                <span>Likes</span>
-              </div>
-              <a href="" className="hover:text-indigo-300">
-                Recipe title
-              </a>
-              <div className="text-[14px] my-2">
-                <p>Summary</p>
-              </div>
-              <div>
-                <div className="text-[12px] text-end">
-                  <span>Prep Time</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
