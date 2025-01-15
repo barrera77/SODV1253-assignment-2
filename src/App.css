@@ -101,6 +101,11 @@
   height: 200px;
   object-fit: cover;
   margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.circled-image:hover {
+  transform: scale(1.1);
 }
 
 .card-content {
@@ -109,8 +114,48 @@
 }
 
 .recipe-card {
-  border: 1px solid rgba(165, 180, 252, 0.8);
   border-radius: 8px;
+}
+
+.recipe-card-content {
+  padding: 14px;
+  border: 1px solid rgba(165, 180, 252, 0.8);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: relative;
+}
+
+.squared-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.squared-image:hover {
+  transform: scale(1.1);
+}
+
+.likes-display {
+  position: absolute;
+  top: -32px;
+  right: -1px;
+  z-index: 10;
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  width: 100px;
+  padding: 8px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(165, 180, 252, 0.8);
+  border-left: 1px solid rgba(165, 180, 252, 0.8);
+  border-right: 1px solid rgba(165, 180, 252, 0.8);
 }
 
 @media (min-width: 300px) and (max-width: 640px) {
