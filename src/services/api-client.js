@@ -1,8 +1,15 @@
 const BASE_URL = import.meta.env.VITE_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export const fetchData = async (end_point) => {
   try {
-    const response = await fetch(`${BASE_URL}${end_point}`);
+    const response = await fetch(`${BASE_URL}${end_point}`, {
+      method: "GET",
+      headers: {
+        "x-api-key": API_KEY,
+        "Content-Type": "application/json",
+      },
+    });
 
     if (!response.ok) {
       throw new Error(`failed to fetch recipe data: ${response.statusText}`);

@@ -1,6 +1,7 @@
 import { FaSearch } from "react-icons/fa";
 import { SectionWrapper } from "../hoc";
 import Suggestions from "./Suggestions";
+import SearchResults from "./SearchResults";
 
 const Search = () => (
   <div className="recipe-search-wrapper">
@@ -17,6 +18,7 @@ const Search = () => (
         <FaSearch />
       </button>
     </div>
+    <SearchResults />
     <Suggestions />
   </div>
 );
