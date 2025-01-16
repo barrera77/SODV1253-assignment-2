@@ -1,3 +1,4 @@
+import About from "./About";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Search from "./Search";
@@ -8,6 +9,7 @@ const HomePage = () => {
     <div>
       <Hero />
       <Navbar />
+      <About />
       <TopRecipes />
       <Search />
     </div>

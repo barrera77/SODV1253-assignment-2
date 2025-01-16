@@ -1,3 +1,11 @@
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+
 const navLinks = [
   {
     id: "home",
@@ -48,4 +56,38 @@ const foodCategories = [
   },
 ];
 
-export { navLinks, foodCategories };
+const socialMediaStats = [
+  {
+    id: "instagram",
+    icon: FaInstagram,
+    amount: "420K",
+    description: "Followers",
+  },
+  {
+    id: "facebook",
+    icon: FaFacebook,
+    amount: "800K",
+    description: "Followers",
+  },
+  {
+    id: "twitter",
+    icon: FaTwitter,
+    amount: "530K",
+    description: "Followers",
+  },
+
+  {
+    id: "youtube",
+    icon: FaYoutube,
+    amount: "630K",
+    description: "Subscribers",
+  },
+  {
+    id: "mail",
+    icon: FaEnvelope,
+    amount: "760K",
+    description: "Subscribers",
+  },
+];
+
+export { navLinks, foodCategories, socialMediaStats };

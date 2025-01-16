@@ -6,6 +6,7 @@ import SearchResults from "./SearchResults";
 import { fetchData } from "../services/api-client";
 
 import { foodCategories } from "../constants";
+import { option } from "framer-motion/client";
 
 const Search = () => {
   const [data, setData] = useState(null);
@@ -45,7 +46,7 @@ const Search = () => {
           className="search-input border sm:w-[60%] w-[50%]"
           placeholder="Search Recipe. . ."
         />
-        <button className="btn-search p-2 bg-indigo-300 text-white">
+        <button className="btn-search py-2 px-4 bg-indigo-300 text-white">
           <FaSearch />
         </button>
       </div>
@@ -53,6 +54,9 @@ const Search = () => {
       <div className="flex flex-col gap-3 xs:w-[100%] justify-center sm:hidden">
         <select name="recipe-category" className="p-3 border rounded-md">
           <option value="0">Select Category</option>
+          {foodCategories.map((category) => (
+            <option key={category.id}>{category.title}</option>
+          ))}
         </select>
         <input
           type="text"

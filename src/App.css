@@ -46,7 +46,6 @@
 
 .nav-link a {
   display: block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -156,6 +155,28 @@
   border-top: 1px solid rgba(165, 180, 252, 0.8);
   border-left: 1px solid rgba(165, 180, 252, 0.8);
   border-right: 1px solid rgba(165, 180, 252, 0.8);
+}
+
+/* About Section */
+.social-media-stats-card {
+  width: 210px;
+  position: relative;
+  padding: 1.25rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: visible;
+}
+
+.card-icon {
+  position: absolute;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(165, 180, 252);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 @media (min-width: 300px) and (max-width: 640px) {
