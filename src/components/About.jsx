@@ -7,7 +7,11 @@ const About = () => {
       <div>
         <div className="about-header mb-[3rem]">
           <p className="font-semibold text-3xl">
-            Welcome to our Recipe App where we have
+            We Are{" "}
+            <span className="text-indigo-300 font-bold text-4xl">
+              Recipe App
+            </span>{" "}
+            Your Trusted Recipe Source With
           </p>
           <h3 className="font-bold text-6xl text-indigo-300 my-[1rem]">
             Every recipe you will ever need! . . .
@@ -18,8 +22,18 @@ const About = () => {
           </p>
         </div>
         <div>
+          <div className="mt-[4rem] mb-[4rem]">
+            <h3 className="text-3xl font-semibold my-[1rem]">
+              Loved by Many . . .
+            </h3>
+            <p className="font-semibold text-[20px]">
+              With thousands of followers, our recipes have inspired countless
+              home chefs. Be part of the culinary journey everyone’s talking
+              about!
+            </p>
+          </div>
           <div className="grid-container">
-            <div className="grid xs:grid-flow-col gap-3 xs:max-h-[350px]">
+            <div className="grid xs:grid-flow-row sm:grid-flow-col gap-3 xs:max-h-[350px]">
               {socialMediaStats.map((stat) => {
                 const IconComponent = stat.icon;
                 return (

@@ -7,8 +7,8 @@ import TopRecipes from "./TopRecipes";
 const HomePage = () => {
   return (
     <div>
-      <Hero />
       <Navbar />
+      <Hero />
       <About />
       <TopRecipes />
       <Search />
