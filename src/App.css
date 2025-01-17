@@ -95,12 +95,19 @@
 }
 
 .circled-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.suggestions-card-image {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  overflow: hidden;
+  position: relative;
   margin: auto;
-  transition: transform 0.3s ease;
 }
 
 .circled-image:hover {
@@ -159,7 +166,6 @@
 
 /* About Section */
 .social-media-stats-card {
-  width: 210px;
   position: relative;
   padding: 1.25rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);

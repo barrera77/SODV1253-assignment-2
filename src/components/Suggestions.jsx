@@ -55,8 +55,8 @@ const Suggestions = () => {
                 </div>
               </div>
             ))}
-          <div className="random-recipe-card">
-            <div className="card-image">
+          <div className="random-recipe-card overflow-hidden">
+            <div className="suggestions-card-image">
               <img
                 src={/* recipe.image */ recipeImage} //replace later with the object image
                 alt="Recipe Image"
@@ -64,7 +64,9 @@ const Suggestions = () => {
               />
             </div>
             <div className="card-content">
-              <h3 className="text-2xl font-bold">Recipe title</h3>
+              <a href="" className="text-2xl font-bold hover:text-indigo-300">
+                Recipe title
+              </a>
             </div>
           </div>
         </div>

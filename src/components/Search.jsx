@@ -34,6 +34,9 @@ const Search = () => {
 
   return (
     <div className="recipe-search-wrapper">
+      <div className="py-3 text-center">
+        <p>Search your recipe by ingredients or directly</p>
+      </div>
       <div className="sm:flex xs:hidden sm:w-[100%] lg:w-[70%] m-auto justify-center">
         <select name="recipe-category" className="recipe-category p-2 border">
           <option value="0">Select Category</option>

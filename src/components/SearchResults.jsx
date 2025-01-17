@@ -1,6 +1,7 @@
 import React from "react";
 import { recipeImage } from "../assets";
-import { FaHeart } from "react-icons/fa";
+import { FaClock, FaHeart } from "react-icons/fa";
+import { FaHeartCirclePlus } from "react-icons/fa6";
 
 const SearchResults = () => {
   return (
@@ -31,9 +32,16 @@ const SearchResults = () => {
               <div className="text-[14px] my-2">
                 <p>Summary</p>
               </div>
-              <div>
-                <div className="text-[12px] text-end">
-                  <span>Prep Time</span>
+              <div className=" border-t-indigo-300 border-t pt-2">
+                <div className="text-[12px] flex justify-between">
+                  <div className="flex items-center gap-1">
+                    <FaHeartCirclePlus className="text-xl text-indigo-300" />
+                    <span>11</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <FaClock className="text-xl text-indigo-300" />
+                    <span>40 mins</span>
+                  </div>
                 </div>
               </div>
             </div>

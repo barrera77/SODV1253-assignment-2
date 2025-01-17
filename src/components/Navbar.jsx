@@ -16,10 +16,10 @@ const Navbar = () => {
 
     const handleIntersection = debounce(([entry]) => {
       setisSticky(!entry.isIntersecting);
-    }, 100);
+    }, 50);
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.1,
+      threshold: 0.07,
     });
 
     if (hero) {

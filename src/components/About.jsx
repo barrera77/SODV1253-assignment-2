@@ -6,14 +6,14 @@ const About = () => {
     <div>
       <div>
         <div className="about-header mb-[3rem]">
-          <p className="font-semibold text-3xl">
+          <p className="font-semibold xs:text-2xl md:text-3xl">
             We Are{" "}
-            <span className="text-indigo-300 font-bold text-4xl">
+            <span className="text-indigo-300 font-bold xs:text-3xl md:text-4xl">
               Recipe App
             </span>{" "}
             Your Trusted Recipe Source With
           </p>
-          <h3 className="font-bold text-6xl text-indigo-300 my-[1rem]">
+          <h3 className="font-bold xs:text-4xl sm:text-5xl text-6xl text-indigo-300 my-[1rem]">
             Every recipe you will ever need! . . .
           </h3>
           <p className="font-semibold text-[20px]">
@@ -32,12 +32,15 @@ const About = () => {
               about!
             </p>
           </div>
-          <div className="grid-container">
-            <div className="grid xs:grid-flow-row sm:grid-flow-col gap-3 xs:max-h-[350px]">
+          <div className="grid-container xs:overflow-y-auto xs:pt-7">
+            <div className="grid xs:grid-flow-row xs:gap-10 xs:max-h-[350px] sm:grid-cols-3 sm:gap-4 lg:grid-flow-col lg:gap-2 px-1">
               {socialMediaStats.map((stat) => {
                 const IconComponent = stat.icon;
                 return (
-                  <div key={stat.id} className="social-media-stats-card">
+                  <div
+                    key={stat.id}
+                    className="social-media-stats-card sm:w-[160px] md:w-[200px] lg:w-[170px] xl:w-[210px] sm:mb-8"
+                  >
                     <div className="stats-card-content mt-3">
                       <div className="card-icon">
                         <IconComponent className="text-2xl m-auto" />
