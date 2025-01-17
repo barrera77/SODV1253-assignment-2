@@ -5,6 +5,14 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import {
+  buzzfeed,
+  food52,
+  foodAndWine,
+  foodNetwork,
+  homeCooks,
+  tasteOfHome,
+} from "../assets";
 
 const navLinks = [
   {
@@ -31,8 +39,8 @@ const foodCategories = [
     title: "Non-Dairy",
   },
   {
-    id: "glutten-free",
-    title: "Glutten-Free",
+    id: "glutten free",
+    title: "Glutten Free",
   },
   {
     id: "peanut",
@@ -90,4 +98,31 @@ const socialMediaStats = [
   },
 ];
 
-export { navLinks, foodCategories, socialMediaStats };
+const foodExperts = [
+  {
+    id: "food52",
+    logo: food52,
+  },
+  {
+    id: "homeCooks",
+    logo: homeCooks,
+  },
+  {
+    id: "tasteOfHome",
+    logo: tasteOfHome,
+  },
+  {
+    id: "buzzfeed",
+    logo: buzzfeed,
+  },
+  {
+    id: "foodAndWine",
+    logo: foodAndWine,
+  },
+  {
+    id: "foodNetwork",
+    logo: foodNetwork,
+  },
+];
+
+export { navLinks, foodCategories, socialMediaStats, foodExperts };

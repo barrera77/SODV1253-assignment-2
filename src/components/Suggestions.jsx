@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchData } from "../services/api-client.js";
 import { PulseLoader } from "react-spinners";
 import { recipeImage } from "../assets/index.js";
+import { Link } from "react-router-dom";
 
 const END_POINT_RANDOM = "/random?number=10";
 
@@ -29,46 +30,37 @@ const Suggestions = () => {
     }
   };
 
-  /*  useEffect(() => {
+  /*   useEffect(() => {
     getRandomRecipes();
   }, []); */
 
   return (
     <div className="suggestions-wrapper py-5 mt-5">
       <div className="pt-5 mb-5 border-b border-indigo-300 ">
-        <h2 className="text-4xl font-bold">Trending Now</h2>
+        <h2 className="text-4xl">Trending Now</h2>
       </div>
-      <div className="grid-container">
-        <div className="grid grid-flow-col gap-3 overflow-x-auto">
+      <div className="grid-container py-5">
+        <div className="grid xs:grid-flow-row sm:grid-flow-col gap-3 sm:overflow-x-auto xs:overflow-y-auto max-h-[450px]">
           {data &&
             data.map((recipe, index) => (
-              <div className="random-recipe-card" key={index}>
-                <div className="card-image">
+              <div className="random-recipe-card overflow-hidden" key={index}>
+                <div className="suggestions-card-image">
                   <img
                     src={recipe.image}
                     alt="Recipe Image"
                     className="circled-image"
                   />
                 </div>
-                <div className="card-content">
-                  <h3 className="text-2xl font-bold">{recipe.title}</h3>
+                <div className="card-content h-180px]">
+                  <Link
+                    to={`/recipe/${recipe.id}`}
+                    className="text-xl hover:text-indigo-300"
+                  >
+                    {recipe.title}
+                  </Link>
                 </div>
               </div>
             ))}
-          <div className="random-recipe-card overflow-hidden">
-            <div className="suggestions-card-image">
-              <img
-                src={/* recipe.image */ recipeImage} //replace later with the object image
-                alt="Recipe Image"
-                className="circled-image"
-              />
-            </div>
-            <div className="card-content">
-              <a href="" className="text-2xl font-bold hover:text-indigo-300">
-                Recipe title
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
