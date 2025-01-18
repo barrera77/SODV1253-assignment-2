@@ -8,10 +8,15 @@ import {
 import {
   barilla,
   buzzfeed,
+  campbells,
+  delmonte,
   food52,
   foodAndWine,
   foodNetwork,
+  hellmans,
   homeCooks,
+  kikoman,
+  raos,
   tasteOfHome,
 } from "../assets";
 
@@ -132,26 +137,31 @@ const recommendedBrands = [
     logo: barilla,
   },
   {
-    id: "",
-    logo:
+    id: "campbells",
+    logo: campbells,
   },
   {
-    id: "",
-    logo:
+    id: "delmonte",
+    logo: delmonte,
   },
   {
-    id: "",
-    logo:
+    id: "hellmans",
+    logo: hellmans,
   },
   {
-    id: "",
-    logo:
+    id: "kikoman",
+    logo: kikoman,
   },
   {
-    id: "",
-    logo:
+    id: "raos",
+    logo: raos,
   },
+];
 
-]
-
-export { navLinks, foodCategories, socialMediaStats, foodExperts, recommendedBrands };
+export {
+  navLinks,
+  foodCategories,
+  socialMediaStats,
+  foodExperts,
+  recommendedBrands,
+};

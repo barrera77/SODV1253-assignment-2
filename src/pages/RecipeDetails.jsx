@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchData } from "../services/api-client";
 import Navbar from "../components/Navbar";
-import { recipeImage } from "../assets";
+import { campbells, recipeImage } from "../assets";
 import { FaClock } from "react-icons/fa";
 import { FaBowlFood, FaCubesStacked } from "react-icons/fa6";
 
@@ -148,8 +148,49 @@ const RecipeDetails = () => {
                   <div className="tag xs:w-[100%]">Gluten Free</div>
                 </div>
                 <div className="recommended-brands">
-                  <div className="grid xs:grid-flow-row md:grid-flow-col">
-                    <div className="brand-card"></div>
+                  <div className="flex justify-between mt-[3rem] py-5 xs:flex-wrap xs:gap-3">
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
+                    <div className="brand-card">
+                      <img
+                        src={campbells}
+                        alt="campbells logo"
+                        className="logo"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
