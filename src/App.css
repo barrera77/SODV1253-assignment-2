@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .truncate-card-text {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -226,6 +230,74 @@
   gap: 1rem;
   padding: 10px;
   background-color: #ffc10730;
+}
+
+.details-card-header {
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(165, 180, 252);
+  border-right: 1px solid rgba(165, 180, 252);
+  border-left: 1px solid rgba(165, 180, 252);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.details-card-image {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.ingredient-ammount {
+  background-color: #a5b4fc;
+  border: 1px solid #a5b4fc;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  text-align: center;
+  align-content: center;
+  padding: 0.5rem 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ingredient-name {
+  border: 1px solid #a5b4fc;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.5rem 0.25rem;
+  align-content: center;
+  font-size: 14px;
+}
+
+.tag {
+  border: 1px solid #a5b4fc;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.step-index,
+.step-description {
+  border: 1px solid #a5b4fc;
+  padding: 0.75rem;
+}
+
+.step-index {
+  background-color: #a5b4fc;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.step-description {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 @media (min-width: 300px) and (max-width: 640px) {

@@ -6,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import {
+  barilla,
   buzzfeed,
   food52,
   foodAndWine,
@@ -125,4 +126,32 @@ const foodExperts = [
   },
 ];
 
-export { navLinks, foodCategories, socialMediaStats, foodExperts };
+const recommendedBrands = [
+  {
+    id: "barilla",
+    logo: barilla,
+  },
+  {
+    id: "",
+    logo:
+  },
+  {
+    id: "",
+    logo:
+  },
+  {
+    id: "",
+    logo:
+  },
+  {
+    id: "",
+    logo:
+  },
+  {
+    id: "",
+    logo:
+  },
+
+]
+
+export { navLinks, foodCategories, socialMediaStats, foodExperts, recommendedBrands };

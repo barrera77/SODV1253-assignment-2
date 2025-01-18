@@ -1,37 +1,72 @@
 import { useEffect, useState } from "react";
-import { menu, close } from "../assets";
 import { navLinks } from "../constants";
 import { FaBars } from "react-icons/fa";
 import { FaWindowClose } from "react-icons/fa";
 import { debounce } from "lodash";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+  const isRecipeDetailsPage = location.pathname.startsWith("/recipe");
+
   const [active, setActive] = useState("");
   const [activeLink, setActiveLink] = useState("");
   const [toggle, setToggle] = useState(false);
   const [isSticky, setisSticky] = useState(false);
 
   useEffect(() => {
-    const hero = document.querySelector(".hero-wrapper");
-
-    const handleIntersection = debounce(([entry]) => {
-      setisSticky(!entry.isIntersecting);
-    }, 50);
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.07,
-    });
-
-    if (hero) {
-      observer.observe(hero);
+    if (isRecipeDetailsPage) {
+      setisSticky(true);
+      return;
     }
 
-    return () => {
-      if (hero) {
-        observer.unobserve(hero);
+    const hero = document.querySelector(".hero-wrapper");
+
+    /**
+     * Handle navbar sticky behaviour
+     * @param {*} isSmallScreen
+     * @returns
+     */
+    const updateNavbarPosition = (isSmallScreen) => {
+      if (isSmallScreen.matches) {
+        // set sticky at the top for small screens
+        setisSticky(true);
+        return;
       }
+
+      // Observe the hero section for sticky bhaviour in large views
+      const handleIntersection = debounce(([entry]) => {
+        setisSticky(!entry.isIntersecting);
+      }, 50);
+
+      const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.07,
+      });
+
+      if (hero) {
+        observer.observe(hero);
+      }
+
+      return () => {
+        if (hero) {
+          observer.unobserve(hero);
+        }
+      };
     };
-  }, []);
+
+    //match the media query for small screens and update navbar position
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+    updateNavbarPosition(mediaQuery);
+
+    const handleMediaChange = (e) => {
+      updateNavbarPosition(e);
+    };
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaChange);
+    };
+  }, [isRecipeDetailsPage]);
 
   return (
     <div
@@ -50,12 +85,6 @@ const Navbar = () => {
               )}
             </button>
 
-            {/* <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[22px] h-[22px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            /> */}
             <div
               className={`${
                 toggle ? "translate-x-0" : "translate-x-full"
@@ -73,7 +102,12 @@ const Navbar = () => {
                       setActive(link.title);
                     }}
                   >
-                    <a href={`#${link.id}`} className="">
+                    <a
+                      href={
+                        isRecipeDetailsPage ? `/#${link.id}` : `#${link.id}`
+                      }
+                      className=""
+                    >
                       {link.title}
                     </a>
                   </li>
@@ -95,7 +129,9 @@ const Navbar = () => {
                   setActiveLink(link.title);
                 }}
               >
-                <a href={`#${link.id}`}>{link.title}</a>
+                <a href={isRecipeDetailsPage ? `/#${link.id}` : `#${link.id}`}>
+                  {link.title}
+                </a>
               </li>
             ))}
           </ul>

@@ -26,10 +26,12 @@ const Search = () => {
         setError(null);
         console.table(searchResults.results);
       } else {
-        throw new Error("Failed to fetch recipes");
+        setData([]);
+        setError(null);
       }
     } catch (err) {
       setError("Failed to fetch data", err);
+      setData(null);
     } finally {
       setLoading(false);
     }
@@ -44,14 +46,15 @@ const Search = () => {
         </p>
       </div>
       <div className="sm:flex xs:hidden sm:w-[100%] lg:w-[70%] m-auto justify-center">
-        <select name="recipe-category" className="recipe-category p-2 border">
+        <select
+          value={diet}
+          onChange={(event) => setDiet(event.target.value)}
+          name="recipe-category"
+          className="recipe-category p-2 border"
+        >
           <option value="">Select Category</option>
           {foodCategories.map((category) => (
-            <option
-              key={category.id}
-              value={category.id}
-              onChange={(event) => setDiet(event.target.value)}
-            >
+            <option key={category.id} value={category.id}>
               {category.title}
             </option>
           ))}

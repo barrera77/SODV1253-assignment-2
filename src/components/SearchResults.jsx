@@ -1,4 +1,3 @@
-import { recipeImage } from "../assets";
 import { FaClock, FaHeart, FaExclamationCircle } from "react-icons/fa";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 import { PulseLoader } from "react-spinners";
@@ -11,7 +10,7 @@ const SearchResults = ({ data, loading, error }) => {
     htmlString.replace(/<\/?[^>]+(>|$)/g, "");
 
   if (loading) {
-    return <PulseLoader className="text-lg" />;
+    return <PulseLoader className="text-lg text-center" />;
   }
 
   if (error) {
@@ -23,7 +22,11 @@ const SearchResults = ({ data, loading, error }) => {
     );
   }
 
-  if (!data || data.length === 0) {
+  if (!data) {
+    return null;
+  }
+
+  if (Array.isArray(data) && data.length === 0) {
     return (
       <div className="warning-message xs:w-[100%] md:w-[70%]">
         <FaExclamationCircle className="text-yellow-600" />
@@ -33,6 +36,7 @@ const SearchResults = ({ data, loading, error }) => {
       </div>
     );
   }
+
   return (
     <div className="results-wrapper py-5 my-5">
       <div className="pt-5 mb-5 border-b border-indigo-300">
