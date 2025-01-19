@@ -187,7 +187,7 @@ const RecipeDetails = () => {
                     taste and quality&quot;
                   </p>
                 </div>
-                <div className="flex justify-between py-5 xs:flex-wrap xs:gap-3">
+                <div className="flex justify-between py-5 xs:flex-wrap xs:gap-5">
                   {recommendedBrands.map((brand) => (
                     <div key={brand.id} className="brand-card">
                       <img
