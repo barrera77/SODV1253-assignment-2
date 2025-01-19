@@ -56,7 +56,7 @@ const Suggestions = () => {
                 <div className="card-content h-[180px] truncate-card-title">
                   <Link
                     to={`/recipe/${recipe.id}`}
-                    className=".truncate-card-title text-xl hover:text-indigo-300"
+                    className="text-xl hover:text-indigo-300"
                   >
                     {recipe.title}
                   </Link>

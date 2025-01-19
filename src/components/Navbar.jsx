@@ -22,6 +22,9 @@ const Navbar = () => {
 
     const hero = document.querySelector(".hero-wrapper");
 
+    //match the media query for small screens and update navbar position
+    const mediaQuery = window.matchMedia("(max-width: 639px)");
+
     /**
      * Handle navbar sticky behaviour
      * @param {*} isSmallScreen
@@ -51,11 +54,12 @@ const Navbar = () => {
         if (hero) {
           observer.unobserve(hero);
         }
+        if (hero && mediaQuery.matches) {
+          observer.unobserve(hero);
+        }
       };
     };
 
-    //match the media query for small screens and update navbar position
-    const mediaQuery = window.matchMedia("(max-width: 639px)");
     updateNavbarPosition(mediaQuery);
 
     const handleMediaChange = (e) => {
@@ -75,7 +79,7 @@ const Navbar = () => {
       } transition-all`}
     >
       <nav className="">
-        <div className="navbar-mobile over ">
+        <div className="navbar-mobile overflow-hidden">
           <div className="sm:hidden flex flex-1 justify-end items-center py-3 ">
             <button onClick={() => setToggle(!toggle)}>
               {toggle ? (
@@ -88,7 +92,7 @@ const Navbar = () => {
             <div
               className={`${
                 toggle ? "translate-x-0 " : "translate-x-full "
-              } dropdown-menu p-6 fixed top-10 right-0 my-2 min-w-[140px] w-[100%] z-10 transition-transform duration-700 ease-in-out `}
+              } dropdown-menu fixed p-6 top-10 right-0 my-2 min-w-[140px] w-[100%] z-10 transition-transform duration-700 ease-in-out `}
             >
               <ul className="list-none flex flex-col justify-center text-center gap-4">
                 {navLinks.map((link) => (

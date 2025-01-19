@@ -33,21 +33,23 @@ const About = () => {
             </p>
           </div>
           <div className="grid-container xs:overflow-y-auto xs:pt-7">
-            <div className="grid xs:grid-flow-row xs:gap-10 xs:max-h-[350px] sm:grid-cols-3 sm:gap-4 lg:grid-flow-col lg:gap-2 px-1">
+            <div className="grid xs:grid-cols-2 xs:gap-2 sm:grid-cols-3 sm:gap-4 lg:grid-flow-col lg:gap-2 px-1">
               {socialMediaStats.map((stat) => {
                 const IconComponent = stat.icon;
                 return (
                   <div
                     key={stat.id}
-                    className="social-media-stats-card sm:w-[160px] md:w-[200px] lg:w-[170px] xl:w-[210px] sm:mb-8"
+                    className="social-media-stats-card xs:w-[120px] md:w-[200px] lg:w-[170px] xl:w-[210px] xs:mb-8"
                   >
                     <div className="stats-card-content mt-3">
                       <div className="card-icon">
                         <IconComponent className="text-2xl m-auto" />
                       </div>
                       <div className="flex flex-col text-center gap-2">
-                        <span className="font-semibold">{stat.amount}</span>
-                        <span>{stat.description}</span>
+                        <span className="font-semibold text-[14px]">
+                          {stat.amount}
+                        </span>
+                        <span className="text-[14px]">{stat.description}</span>
                       </div>
                     </div>
                   </div>
