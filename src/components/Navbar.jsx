@@ -118,7 +118,7 @@ const Navbar = () => {
         </div>
         {/* Desktop View */}
         <div className="navbar-md-view xs:hidden sm:block">
-          <ul className="nav-links xs:w-[80%]">
+          <ul className="nav-links sm:w-[80%] lg:w-[60%] m-auto">
             {navLinks.map((link) => (
               <li
                 key={link.id}

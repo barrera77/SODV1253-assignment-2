@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaPrint } from "react-icons/fa";
 import { SectionWrapper } from "../hoc";
 import Suggestions from "./Suggestions";
 import SearchResults from "./SearchResults";
@@ -14,7 +14,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
   const [diet, setDiet] = useState("");
 
-  const END_POINT_SEARCH = `/complexSearch?query=${query}&diet=${diet}&addRecipeInformation=true&number=2`;
+  const END_POINT_SEARCH = `/complexSearch?query=${query}&diet=${diet}&addRecipeInformation=true&number=10`;
 
   const getRecipes = async () => {
     try {
@@ -96,7 +96,7 @@ const Search = () => {
       <div className="mt-7">
         <SearchResults data={data} loading={loading} error={error} />
       </div>
-      <Suggestions />
+      <div className="">{!data?.length && <Suggestions />}</div>
     </div>
   );
 };

@@ -30,9 +30,9 @@ const Suggestions = () => {
     }
   };
 
-  /*   useEffect(() => {
+  useEffect(() => {
     getRandomRecipes();
-  }, []); */
+  }, []);
 
   return (
     <div className="suggestions-wrapper py-5 mt-5">
@@ -51,10 +51,10 @@ const Suggestions = () => {
                     className="circled-image"
                   />
                 </div>
-                <div className="card-content h-180px]">
+                <div className="card-content h-[180px] truncate-card-title">
                   <Link
                     to={`/recipe/${recipe.id}`}
-                    className="text-xl hover:text-indigo-300"
+                    className=".truncate-card-title text-xl hover:text-indigo-300"
                   >
                     {recipe.title}
                   </Link>

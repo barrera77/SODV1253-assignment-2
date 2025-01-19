@@ -133,10 +133,6 @@ const foodExperts = [
 
 const recommendedBrands = [
   {
-    id: "barilla",
-    logo: barilla,
-  },
-  {
     id: "campbells",
     logo: campbells,
   },
@@ -151,6 +147,10 @@ const recommendedBrands = [
   {
     id: "kikoman",
     logo: kikoman,
+  },
+  {
+    id: "barilla",
+    logo: barilla,
   },
   {
     id: "raos",

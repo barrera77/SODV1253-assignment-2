@@ -1,4 +1,5 @@
 import About from "./About";
+import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Search from "./Search";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <About />
       <TopRecipes />
       <Search />
+      <Footer />
     </div>
   );
 };

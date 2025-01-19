@@ -43,7 +43,7 @@ const SearchResults = ({ data, loading, error }) => {
         <h2 className="text-4xl ">Top Results</h2>
       </div>
       <div className="grid-container">
-        <div className="grid xs:grid-flow-row sm:xs:grid-flow-col gap-3 sm:overflow-x-auto xs:overflow-y-auto ">
+        <div className="grid xs:max-h-[500px] xs:grid-flow-row sm:xs:grid-flow-col gap-3 sm:overflow-x-auto xs:overflow-y-auto py-4">
           {data.map((recipe) => (
             <div
               key={recipe.id}
@@ -63,10 +63,10 @@ const SearchResults = ({ data, loading, error }) => {
                   <FaHeart className="text-indigo-300 text-xl " />
                   <span>{recipe.aggregateLikes}</span>
                 </div>
-                <div className="h-[50px]">
+                <div className="truncate-card-title h-[50px]">
                   <Link
                     to={`/recipe/${recipe.id}`}
-                    className="hover:text-indigo-300"
+                    className=" hover:text-indigo-300"
                   >
                     {recipe.title}
                   </Link>

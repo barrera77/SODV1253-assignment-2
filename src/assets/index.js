@@ -14,6 +14,7 @@ import kikoman from "./kikoman.png";
 import raos from "./raos.png";
 import delmonte from "./delmonte.png";
 import barilla from "./barilla.png";
+import logo from "./logo-food-recipes.png";
 
 export {
   close,
@@ -32,4 +33,5 @@ export {
   raos,
   delmonte,
   barilla,
+  logo,
 };
