@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .truncate-card-text {
   display: -webkit-box;
   -webkit-line-clamp: 3;

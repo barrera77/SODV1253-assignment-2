@@ -75,8 +75,8 @@ const Navbar = () => {
       } transition-all`}
     >
       <nav className="">
-        <div className="navbar-mobile ">
-          <div className="sm:hidden flex flex-1 justify-end items-center py-3">
+        <div className="navbar-mobile over ">
+          <div className="sm:hidden flex flex-1 justify-end items-center py-3 ">
             <button onClick={() => setToggle(!toggle)}>
               {toggle ? (
                 <FaWindowClose className="text-2xl text-white" />
@@ -87,8 +87,8 @@ const Navbar = () => {
 
             <div
               className={`${
-                toggle ? "translate-x-0" : "translate-x-full"
-              } dropdown-menu p-6 absolute top-10 right-0 my-2 min-w-[140px] w-[100%] z-10 transition-transform duration-700 ease-in-out`}
+                toggle ? "translate-x-0 " : "translate-x-full "
+              } dropdown-menu p-6 fixed top-10 right-0 my-2 min-w-[140px] w-[100%] z-10 transition-transform duration-700 ease-in-out `}
             >
               <ul className="list-none flex flex-col justify-center text-center gap-4">
                 {navLinks.map((link) => (

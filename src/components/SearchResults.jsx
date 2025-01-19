@@ -3,6 +3,7 @@ import { FaHeartCirclePlus } from "react-icons/fa6";
 import { PulseLoader } from "react-spinners";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { recipeImage } from "../assets";
 
 const SearchResults = ({ data, loading, error }) => {
   //Clean up text from request removing all htmltags
@@ -50,13 +51,13 @@ const SearchResults = ({ data, loading, error }) => {
               className="recipe-card sm:w-[290px] xs:w-[100%]"
             >
               <div className="card-image h-[160px] overflow-hidden">
-                <a href="">
+                <Link to={`/recipe/${recipe.id}`}>
                   <img
-                    src={recipe.image}
+                    src={recipe.image || recipeImage}
                     alt="Recipe Image"
                     className="squared-image "
                   />
-                </a>
+                </Link>
               </div>
               <div className="recipe-card-content">
                 <div className="likes-display">

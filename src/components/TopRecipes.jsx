@@ -53,13 +53,13 @@ const TopRecipes = () => {
             data.map((recipe, index) => (
               <div key={index} className="recipe-card sm:w-[290px] xs:w-[100%]">
                 <div className="card-image h-[160px] overflow-hidden">
-                  <a href="">
+                  <Link to={`/recipe/${recipe.id}`}>
                     <img
-                      src={recipe.image}
+                      src={recipe.image || recipeImage}
                       alt="Recipe Image"
                       className="squared-image "
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="recipe-card-content">
                   <div className="likes-display">

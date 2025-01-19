@@ -45,11 +45,13 @@ const Suggestions = () => {
             data.map((recipe, index) => (
               <div className="random-recipe-card overflow-hidden" key={index}>
                 <div className="suggestions-card-image">
-                  <img
-                    src={recipe.image}
-                    alt="Recipe Image"
-                    className="circled-image"
-                  />
+                  <Link to={`/recipe/${recipe.id}`}>
+                    <img
+                      src={recipe.image || recipeImage}
+                      alt="Recipe Image"
+                      className="circled-image"
+                    />
+                  </Link>
                 </div>
                 <div className="card-content h-[180px] truncate-card-title">
                   <Link
